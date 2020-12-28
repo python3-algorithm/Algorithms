@@ -1,7 +1,7 @@
 # 算法2.1 选择排序
 
 
-def selection(A):
+def selection(A: list):
     """
     选择排序
     (N-1)+(N-2)+...+2+1=N(N-1)/2 ~N^2/2 次比较
