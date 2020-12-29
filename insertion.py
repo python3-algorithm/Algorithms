@@ -1,4 +1,5 @@
 # 算法2.2 插入排序
+# 插入排序对于部分有序的数组十分高效，也很适合小规模数组。
 
 
 def insertion(arr: list):
@@ -12,10 +13,11 @@ def insertion(arr: list):
         j = i - 1
         while j >= 0 and current < arr[j]:
             # 当前item右移一位
+            # 内循环只右移，不交换，
             arr[j + 1] = arr[j]
             # 当前索引往左遍历
             j -= 1
-        # 插入
+        # 在外循环进行一次交换/插入；访问数组次数可减半，大幅提升插入排序的速度
         arr[j + 1] = current
 
 
